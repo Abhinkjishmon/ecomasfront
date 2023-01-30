@@ -1,15 +1,14 @@
 <div class="body">
-    
     <div class="wrapper">
         <div class="form-wrapper sign-in">
-            <form action="">
+            <form (ngSubmit)="login()" [formGroup]="loginForm">
                 <h2>Login</h2>
                 <div class="input-group">
-                    <input type="text" required>
+                    <input name="uname" formControlName="uname" class="form-control" id="floatingInput" type="text" required>
                     <label for="">username</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
+                    <input name="pswd" formControlName="pswd"  type="password" required>
                     <label for="">password</label>
                 </div>
                 <div class="remember">
@@ -17,13 +16,9 @@
                 </div>
                 <button type="submit">Login</button>
                 <div class="signup-link">
-                    <p>Don't have an account?<a href="#" class="signUpBtn-link">Register</a></p>
+                    <p>Don't have an account?<a routerLink="register" class="signUpBtn-link">Register</a></p>
                 </div>
             </form>
         </div>
-
-        
     </div>
-
-    
 </div>

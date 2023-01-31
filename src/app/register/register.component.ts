@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,7 @@ export class RegisterComponent {
     pswd: ['', [Validators.required, Validators.pattern('[0-9]*')]]
   })
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private api:ApiService) {
 
   }
   register() {
@@ -24,6 +25,11 @@ export class RegisterComponent {
       let email = this.registerForm.value.email
       let uname = this.registerForm.value.uname
       let pswd = this.registerForm.value.pswd
+      this.api.register(uname,email,pswd)
+      .subscribe((result:any)=>{
+        console.log(result);
+        
+      })
     }
     else {
       alert('Invalid Form')

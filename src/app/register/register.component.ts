@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class RegisterComponent {
     pswd: ['', [Validators.required, Validators.pattern('[0-9]*')]]
   })
 
-  constructor(private fb: FormBuilder,private api:ApiService) {
+  constructor(private fb: FormBuilder,private api:ApiService,private router:Router) {
 
   }
   register() {
@@ -25,10 +26,20 @@ export class RegisterComponent {
       let uname = this.registerForm.value.uname
       let pswd = this.registerForm.value.pswd
       this.api.register(uname,email,pswd)
-      .subscribe((result:any)=>{
+      .subscribe(
+        //success
+        (result:any)=>{
         alert(result.message)
+        //navigate login
+        this.router.navigateByUrl('')
+
         
-      })
+      },
+      //client
+      (result:any)=>{
+        alert(result.error.message)
+      }
+      )
     }
     else {
       alert('Invalid Form')

@@ -18,4 +18,13 @@ export class ApiService {
     //server call to register an account and return response to register component
     return this.http.post('http://localhost:3000/register',body)
   }
+
+  login(uname:any,pswd:any){
+    const body = {
+      uname,
+      pswd
+    }
+    //server call to login an account and return response to login component
+    return this.http.post('http://localhost:3000/login',body)
+  }
 }

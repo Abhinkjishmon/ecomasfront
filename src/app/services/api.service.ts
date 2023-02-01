@@ -16,6 +16,6 @@ export class ApiService {
       pswd
     }
     //server call to register an account and return response to register component
-    return this.http.post('',body)
+    return this.http.post('http://localhost:3000/register',body)
   }
 }

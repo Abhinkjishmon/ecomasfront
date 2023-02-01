@@ -1,0 +1,21 @@
+.body{
+    background: #000;
+    position: fixed;
+    width: 100%;
+}
+nav{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+nav a{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1rem;
+}
+nav a:hover{
+    background-color: #0ef;
+    color: #000;
+}

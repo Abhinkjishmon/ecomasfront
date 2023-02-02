@@ -22,3 +22,20 @@
     background: #0ef;
     color: #000;
 }
+.banner-container{
+    grid: 32rem;
+}
+.banner{
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+img:hover{
+    transform: scale(1.2);
+}

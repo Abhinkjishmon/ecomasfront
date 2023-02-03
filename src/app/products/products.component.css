@@ -1,0 +1,152 @@
+:root {
+    --primary: #18253c;
+    --secondary: #00dd53;
+    --bg: #0e1523;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider{
+    background-color: #0e1523;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+.card{
+    position: relative;
+    width: 17rem;
+    height: 23rem;
+    background-color: #18253c;
+    border-radius: 1rem;
+    border: .1rem solid transparent;
+    box-shadow: 0 .2rem .6rem #0003;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    color: #fff;
+}
+.card:hover{
+    cursor: pointer;
+    border: .1rem solid #0ef;
+    transform: scale(1.05);
+}
+.card::before, .card::after{
+    position: absolute;
+    content: "";
+    background-color: #0ef;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    z-index: 100;
+}
+.card::before{
+    top: -6%;
+    right: -6%;
+    width: 9rem;
+    height: 9rem;
+}
+.card::after{
+    bottom: -6%;
+    left: -6%;
+    width: 5rem;
+    height: 5rem;
+}
+.card:hover::before{
+    transform: scale(1.8);
+}
+.card:hover::after{
+    transform: scale(0);
+}
+.card-content{
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-img{
+    width: auto;
+    height: 9.5rem;
+}
+.card-title{
+    font-size: 1rem;
+    transition-delay: .1s;
+}
+.star{
+    font-size: 1.4rem;
+    color: gold;
+}
+.card-price{
+    font: bolder 1.5rem sans-serif;
+}
+.card-body{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition-delay: .2s;
+}
+.card-footer{
+    transition-delay: .3s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .2rem;
+}
+.btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: unset;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: #fff;
+}
+.btn-success{
+    background-color: #0ef;
+}
+.btn-border{
+    border: .1rem solid #0ef;
+}
+.btn-success:hover{
+    border: .1rem solid #0ef;
+    background-color: #18253c;
+    color: white;
+}
+.btn-border:hover{
+    background-color: #0ef;
+}
+.card-img,.card-title{
+    transform: translateY(4rem);
+    transition: .5s ease-in-out;
+}
+.card-img,.card-title{
+    transform: translateY(4rem);
+    transition: .5s ease-in-out;
+}
+.card-body,.card-footer{
+    transform: translateY(8rem);
+    transition: .5s ease-in-out;
+}
+.card:hover .card-img,
+.card:hover .card-title,
+.card:hover .card-body,
+.card:hover .card-footer{
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+

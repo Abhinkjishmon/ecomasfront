@@ -5,7 +5,7 @@
     justify-content: center;
 }
 .banner-container .banner{
-    background: linear-gradient(-55deg, #ff7675 29%,#d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+    background: linear-gradient(-55deg, #6c6cef 29%,#7a92f1 29.1%, #5c85ed 68%, #4276a3 68.1%);
     border-radius: 5px;
     margin: 10px;
     display: flex;
@@ -51,14 +51,4 @@
     color: #d63031;
     margin: 5px auto;
     text-decoration: none;
-}
-.banner-container .banner .women{
-    position: relative;
-    bottom: -33px;
-    padding: 10px;
-    flex: 1 1 250px;
-}
-.banner-container .banner .women img{
-    width: 100%;
-
 }

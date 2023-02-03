@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    padding-top: 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.project{
+    display: flex;
+}
+.shop{
+    flex: 75%;
+}
+.box{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background: #0ef;
+    transition: all .6s ease;
+    box-shadow: rgba(100,100,111,0.2) 0 7px 29px 0;
+}

@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #0e1523;
 }
 .banner-container .banner{
     background: linear-gradient(-55deg, #6c6cef 29%,#7a92f1 29.1%, #5c85ed 68%, #4276a3 68.1%);

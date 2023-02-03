@@ -11,7 +11,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
-import { OffersComponent } from './offers/offers.component'
+import { OffersComponent } from './offers/offers.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { OffersComponent } from './offers/offers.component'
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    OffersComponent
+    OffersComponent,
+    CartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

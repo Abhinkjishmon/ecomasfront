@@ -6,25 +6,30 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   //register
-  register(uname:any,email:any,pswd:any){
-    const body={
+  register(uname: any, email: any, pswd: any) {
+    const body = {
       uname,
       email,
       pswd
     }
     //server call to register an account and return response to register component
-    return this.http.post('http://localhost:3000/register',body)
+    return this.http.post('http://localhost:3000/register', body)
   }
 
-  login(uname:any,pswd:any){
+  login(uname: any, pswd: any) {
     const body = {
       uname,
       pswd
     }
     //server call to login an account and return response to login component
-    return this.http.post('http://localhost:3000/login',body)
+    return this.http.post('http://localhost:3000/login', body)
+  }
+
+  //products api
+  getAllProducts() {
+    return this.http.get('http://localhost:3000/products')
   }
 }

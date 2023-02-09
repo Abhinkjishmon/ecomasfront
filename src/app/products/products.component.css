@@ -68,8 +68,8 @@
     align-items: center;
 }
 .card-img{
-    width: auto;
-    height: 9.5rem;
+    width: 10rem;
+    height: 10rem;
 }
 .card-title{
     font-size: 1rem;
@@ -106,9 +106,11 @@
 }
 .btn-success{
     background-color: #0ef;
+    text-decoration: none;
 }
 .btn-border{
     border: .1rem solid #0ef;
+    text-decoration: none;
 }
 .btn-success:hover{
     border: .1rem solid #0ef;

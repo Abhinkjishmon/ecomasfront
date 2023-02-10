@@ -12,7 +12,7 @@
                 <p class="card-price">${{product.price}}</p>
             </div>
             <div class="card-footer">
-                <a class="btn btn-success">wishlist</a>
+                <button (click)="addToWishlist(product)" class="btn btn-success">wishlist</button>
                 <a routerLink="/cart" class="btn btn-border">Cart</a>
             </div>
         </div>

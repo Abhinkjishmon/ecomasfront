@@ -32,4 +32,9 @@ export class ApiService {
   getAllProducts() {
     return this.http.get('http://localhost:3000/products')
   }
+
+  //add-to-wishlist api call
+  addToWishlist(product:any){
+    return this.http.post('http://localhost:3000/wishlist',product)
+  }
 }

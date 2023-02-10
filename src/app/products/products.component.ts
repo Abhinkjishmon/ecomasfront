@@ -20,4 +20,17 @@ export class ProductsComponent implements OnInit{
     })
   }
 
+  //addtowishlist
+  addToWishlist(product:any){
+    this.api.addToWishlist(product)
+    .subscribe(
+      (result:any)=>{
+      alert(result.message)
+    },
+    (result:any)=>{
+      alert(result.error.message)
+    }
+    )
+  }
+
 }

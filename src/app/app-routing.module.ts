@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   //login
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
   {
     path:'cart',component:CartComponent
+  },
+  {
+    path:'wishlist',component:WishlistComponent
   }
 ];
 
